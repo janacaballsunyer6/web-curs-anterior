@@ -1,0 +1,388 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+    scroll-behavior:smooth} /*Fem que el moviment de la pagina sigui suau*/
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#1f1f2f;
+    color:white}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:rgba(0, 0, 0, 0.499); /*Afegim una mica de transperència al menu*/
+    position:fixed;
+    width:100%;
+    z-index:100}
+
+.logo img {
+  height: 40px; /* ajusta la mida del logo */
+  width: auto;}
+
+/*NAVEGACIÓ*/
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:all 0.3s ease}
+
+nav a:hover{
+    color:#38bdf8} /*Fem que quan passem per sobre del navegador/menu la lletra canvi de color*/
+
+/*INICI*/
+section{
+    padding:100px 20px}
+
+.inici{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /*Afegim una capa una mica fosca a la imatge perquè es vegi el text*/
+        url('img/portada.jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;}
+
+.titol-logo img {
+  max-width: 300px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;    
+}
+
+.inici p{
+    margin:10px 0 20px;
+    color: #ffffff;
+}
+
+/*BOTONS*/
+.btn{
+    background:#38bdf8;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:all 0.3s ease}
+.btn:hover{
+    transform:scale(1.1);
+    background:#7dd3fc}
+
+.btn:active{
+    transform:scale(0.95)}
+
+h2{
+    text-align:center;margin-bottom:40px}
+
+/*ITINERARI*/
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+th {
+  background: linear-gradient(90deg, #38bdf8, #7dd3fc); /*Fem que el color de la casella sigui gradient*/
+  color: black;
+  padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+}
+
+/*PATROCINADORS*/
+.patrocinadors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: 40px auto;
+  align-items: center;
+}
+
+.patrocinador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.patrocinador img {
+  width: 100px;
+}
+
+.patrocinador:hover {
+  transform: scale(1.08);
+  background: rgba(123, 201, 235, 0.184);
+}
+/*DATES*/
+.dates {
+  text-align: center;
+}
+
+.dates-quadrat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.data {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.data h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.data p {
+  margin: 8px 0;
+}
+
+.data span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #63efff;
+}
+
+.calendari {
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  background: transparent; 
+  box-shadow: none;        
+  padding: 0;              
+  border: none;
+}
+
+.calendari img {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: none;
+  transition: 0.3s;
+}
+
+/*FAQ*/
+.faq{
+    padding:0px;
+}
+.faq-item{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5)}
+
+.faq-item summary{
+    stroke-width: 30;
+    color: #ffffff;
+}
+.faq-item p {
+  margin-top: 10px;
+  color: #9efff7;
+  line-height: 1.5;
+}
+/*CONTACTE*/
+.contacte {
+  padding: 80px 20px;
+}
+
+.contacte h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.contacte-contenidor {
+  display: flex;
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contacte .info {
+  flex: 1;
+}
+
+/* MAPA */
+.contacte iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.xarxes {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.xarxes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xarxes a img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  transition: 0.3s;
+}
+
+.xarxes a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.contacte form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 280px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #38bdf8;
+}
+
+/* BOTÓ */
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/*REGISTRE*/
+.registre {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.registre h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.registre-formulari {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.registre-formulari input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registre-formulari button {
+  padding: 10px;
+  border: none;
+  background: #38bdf8;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/*FOOTER*/
+footer{
+    background:#02021f;
+    padding:30px;
+    text-align:center}
+
+.xarxes{
+  display:flex;
+  size:28px;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:10px
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #38bdf8;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@media(max-width:768px){ /*Això fa que el disseny sigui responsive*/
+  nav ul{
+    flex-direction:column;
+    background:black;
+    position:absolute;
+    top:70px;right:0;
+    padding:20px}
+  .contacte{
+    flex-direction:column}
+  .inici h1{
+    font-size:32px}
+}
